@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления HR</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Система управления HR</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="homeLink">Главная</a></li>
+                <li><a href="#" id="vacanciesLink">Вакансии</a></li>
+                <li><a href="#" id="candidatesLink">Кандидаты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Добро пожаловать в систему управления HR!</h2>
+            <p id="vacancyCount">Текущее количество вакансий: <span>0</span></p>
+            <p id="candidateCount">Текущее количество кандидатов: <span>0</span></p>
+        </section>
+        <section id="vacancies" style="display: none;">
+            <h2>Вакансии</h2>
+            <button id="sortVacanciesButton">Сортировать вакансии</button>
+            <ul id="vacanciesList">
+    <li>Менеджер по продажам: Ответственность за продажу нашей продукции</li>
+    <li>Разработчик ПО: Разработка и поддержка нашего веб-сайта и мобильных приложений</li>
+    <li>HR-менеджер: Управление вопросами найма и увольнения</li>
+</ul>
+
+            <button id="addVacancyButton">Добавить вакансию</button>
+            <form id="vacancyForm" style="display: none;">
+                <label for="vacancyTitle">Название вакансии:</label>
+                <input type="text" id="vacancyTitle" name="vacancyTitle" required>
+                <label for="vacancyDescription">Описание вакансии:</label>
+                <textarea id="vacancyDescription" name="vacancyDescription" required></textarea>
+                <input type="submit" value="Сохранить вакансию">
+            </form>
+            <!-- Here we'll list the job vacancies -->
+        </section>
+        <section id="candidates" style="display: none;">
+            <h2>Кандидаты</h2>
+            <button id="sortCandidatesButton">Сортировать кандидатов</button>
+            <ul id="candidatesList">
+    <li>Батыр Урзаков: Навыки программирования, опыт работы с базами данных</li>
+    <li>Алишер Алиев: Опыт работы в продажах, навыки коммуникации</li>
+    <li>Мадина Сетерова: Опыт работы в HR, навыки управления персоналом</li>
+</ul>
+
+            <button id="addCandidateButton">Добавить кандидата</button>
+            <form id="candidateForm" style="display: none;">
+                <label for="candidateName">Имя кандидата:</label>
+                <input type="text" id="candidateName" name="candidateName" required>
+                <label for="candidateSkills">Навыки кандидата:</label>
+                <textarea id="candidateSkills" name="candidateSkills" required></textarea>
+                <input type="submit" value="Сохранить кандидата">
+            </form>
+            <!-- Here we'll list the candidates -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Система управления HR</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
